@@ -1,78 +1,93 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<h1 align="center">Web Technologies Project</h1>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+  <!-- Frontend -->
+  <img src="https://img.shields.io/badge/HTML-5-orange.svg" alt="HTML">
+  <img src="https://img.shields.io/badge/CSS-3-blue.svg" alt="CSS">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg" alt="JavaScript">
+
+  <!-- Backend -->
+  <img src="https://img.shields.io/badge/PHP-7.4-777BB4.svg" alt="PHP">
+  <img src="https://img.shields.io/badge/Laravel-Framework-red.svg" alt="Laravel">
+
+  <!-- Database -->
+  <img src="https://img.shields.io/badge/SQL-MySQL-blue.svg" alt="MySQL">
+
+  <!-- Architettura -->
+  <img src="https://img.shields.io/badge/Architecture-MVC-orange.svg" alt="MVC">
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<p>
+<i>Implementation of a platform for managing listings, users, messaging, and booking requests.</i>
+</p>
 
-## Learning Laravel
+<hr>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+<h2>Website Structure</h2>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<p>
+The website is organized into four navigation levels, all accessible through a shared navbar.  
+After login, the user is redirected to the homepage of their corresponding level.  
+Logging out always returns the user to Level 1.
+</p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+<ul>
+  <li><b>Level 1:</b> Public pages (homepage, catalog preview, basic info)</li>
+  <li><b>Level 2:</b> Registered users (basic features, messaging access)</li>
+  <li><b>Level 3:</b> Locatario (tenant) functionalities (filters, booking, messaging)</li>
+  <li><b>Level 4:</b> Locatore (landlord) or Admin functionalities (managing listings, viewing requests)</li>
+</ul>
 
-## Contributing
+<p>
+A complete navigation scheme was created to describe transitions between levels and components.
+</p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<hr>
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+<h2>✅ Adopted Solutions</h2>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<h3>1. User Homepage Management</h3>
+<p>
+We implemented a shared homepage template for all logged-in users and differentiated its features through conditional checks based on user type (locatore or locatario).  
+The header and footer were modularized and included via a base layout for all pages.  
+A carousel with 3 slides dynamically adapts its content depending on whether the user is logged in or browsing as a guest.
+</p>
 
-## License
+<h3>2. Listing Management (Locatore)</h3>
+<p>
+Landlords can add, edit, or delete their listings from a dedicated page.  
+Listing details include a section for viewing booking requests, accepting or rejecting them, viewing requester data, or contacting the user via messaging.
+</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h3>3. Catalog Management</h3>
+<p>
+We kept a single page for the catalog and adapted its behavior using conditional logic:  
+</p>
+
+<ul>
+  <li>Guests can browse listings but cannot open details.</li>
+  <li>Locatori and Admins can view listings but not open details.</li>
+  <li>Locatari can open listing details, filter results, send messages to the landlord, or submit a booking request.</li>
+</ul>
+
+<h3>4. Admin Statistics</h3>
+<p>
+The statistics page includes filters such as listing type and date range to refine the displayed data.
+</p>
+
+<hr>
+
+<p align="center"><i>Project created as part of the Web Technologies and Databases coursework.</i></p>
+
+<h2>Authors</h2>
+
+* Michele Vigliotta
+* Filippo Montagnoli
+* Marco Pasquale Martino
