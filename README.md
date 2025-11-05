@@ -23,24 +23,24 @@
 <h2>Website Structure</h2>
 
 <p>
-The website is organized into four navigation levels, accessed through a shared navbar.  
-After login, users are redirected to the homepage of their respective level.
+The website is organized into four navigation levels, all accessible through a shared navbar.  
+After login, users are redirected to the homepage corresponding to their assigned level.
 </p>
 
 <ul>
   <li><b>Level 1:</b> Public pages (homepage, catalog preview)</li>
   <li><b>Level 2:</b> Registered users (basic features, messaging)</li>
   <li><b>Level 3:</b> Locatario (tenant): filters, bookings, messaging</li>
-  <li><b>Level 4:</b> Locatore / Admin: listing management, requests</li>
+  <li><b>Level 4:</b> Locatore / Admin: listing management, booking requests</li>
 </ul>
 
 <h2>Adopted Solutions</h2>
 
 <ul>
   <li><b>User Homepage:</b> single template with conditional rendering based on user type; modular header/footer; dynamic carousel</li>
-  <li><b>Listing Management (Locatore):</b> add/edit/delete listings, view requests, accept/reject, contact users</li>
-  <li><b>Catalog:</b> single page with behavior adapted by role (guest, tenant, landlord, admin)</li>
-  <li><b>Admin Statistics:</b> filtered data by listing type and date</li>
+  <li><b>Listing Management (Locatore):</b> add/edit/delete listings; view requests; accept/reject; contact users</li>
+  <li><b>Catalog:</b> single page with behavior adapted to each role (guest, tenant, landlord, admin)</li>
+  <li><b>Admin Statistics:</b> filtered data by listing type and date range</li>
 </ul>
 
 <h2>Tech Stack</h2>
